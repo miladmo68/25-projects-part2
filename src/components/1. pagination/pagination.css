@@ -1,0 +1,82 @@
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 8px;
+}
+
+/* Pagination Buttons */
+.pagination-btn {
+  padding: 10px 18px;
+  margin: 0 4px;
+  background-color: #0056b3; /* Deep professional blue */
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination-btn:hover {
+  background-color: #004494; /* Slightly darker blue */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active Page Button */
+.pagination-btn.active {
+  background: linear-gradient(135deg, #ff6b00, #d45500); /* Elegant gradient */
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid #bb3f00;
+  box-shadow: 0px 4px 8px rgba(255, 107, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.pagination-btn.active:hover {
+  background: linear-gradient(135deg, #ff7f23, #e65c00);
+  border-color: #cc4b00;
+}
+
+/* Disabled Button */
+.pagination-btn:disabled {
+  background-color: #e0e0e0;
+  color: #888;
+  border: 1px solid #d0d0d0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* List Container */
+.list-items {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  padding: 0;
+  margin: 25px auto;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+/* List Items */
+.list-items li {
+  padding: 16px;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-items li:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #0056b3;
+}

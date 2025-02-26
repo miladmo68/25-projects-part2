@@ -7,6 +7,7 @@ import RandomQuoteGenerator from "./components/5. random-quote-generator";
 import TooltipTest from "./components/6. Tooltip/test";
 import CurrencyConverter from "./components/7. currency-converter";
 import FilterProducts from "./components/8. filter-products";
+import TipCalculator from "./components/9. tip-calculator";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <CurrencyConverter />
       <hr style={{ border: "1px solid black" }} />
       <FilterProducts />
+      <hr style={{ border: "1px solid black" }} />
+      <TipCalculator />
     </div>
   );
 }

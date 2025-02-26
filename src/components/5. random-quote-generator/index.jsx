@@ -6,6 +6,7 @@ import "./quote.css";
 const RandomQuoteGenerator = () => {
   const [loading, setLoading] = useState(false);
   const [quote, setQuote] = useState(null);
+  const [error, setError] = useState("");
 
   async function fetchQuote() {
     try {
@@ -21,6 +22,7 @@ const RandomQuoteGenerator = () => {
     } catch (error) {
       setLoading(false);
       console.log(error);
+      setError(error.message);
     }
   }
 
@@ -34,6 +36,10 @@ const RandomQuoteGenerator = () => {
 
   if (loading) {
     return <h3>Loading Quote ! Please wait</h3>;
+  }
+
+  if (error) {
+    return <h3>Error: {error}</h3>;
   }
 
   return (

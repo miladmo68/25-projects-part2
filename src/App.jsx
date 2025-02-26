@@ -4,6 +4,7 @@ import DigitalClock from "./components/2. digital-clock";
 import CountdownTimerTest from "./components/3. countdown-timer/test";
 import StepProgressBarTest from "./components/4. step-progress-bar/test";
 import RandomQuoteGenerator from "./components/5. random-quote-generator";
+import TooltipTest from "./components/6. Tooltip/test";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <hr style={{ border: "1px solid black" }} />
       <RandomQuoteGenerator />
       <hr style={{ border: "1px solid black" }} />
+      <TooltipTest />
     </div>
   );
 }

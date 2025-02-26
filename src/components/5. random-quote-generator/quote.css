@@ -1,0 +1,40 @@
+.random-quote-generator {
+  margin: 20px 0;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.quote-wrapper {
+  background-color: #2c2c2c; /* A dark grey for a softer look than pure black */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quote-wrapper p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.refresh-btn {
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #f3f800, #ffeb3b);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: linear-gradient(45deg, #ffeb3b, #f3f800);
+  transform: translateY(-2px);
+}

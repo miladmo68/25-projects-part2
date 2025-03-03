@@ -1,35 +1,64 @@
 .music-player {
   max-width: 500px;
-  margin: auto;
-  margin-top: 30px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
 }
 
 .music-player img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 20px;
+  width: 80%; /* Reduced from 100% to 80% */
+  max-width: 300px; /* Ensures the image doesn't get too large on bigger screens */
+  display: block; /* Allows the margin auto to center the image */
+  margin: 0 auto 20px; /* Centers the image and keeps bottom margin */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.music-player img:hover {
+  transform: scale(1.02);
 }
 
 .music-player .progress-bar {
+  position: relative;
+  width: 100%;
   height: 15px;
   border-radius: 8px;
-  background-color: #cccccc;
-  margin: 20px 0px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
   overflow: hidden;
+}
+
+.music-player .progress-bar .progress {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #8a80ff);
+  width: 0%; /* Updated dynamically via JS */
+  transition: width 0.3s ease;
 }
 
 .track-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .track-controls button {
-  padding: 12px 20px;
-  background-color: #f3f800;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 12px 24px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.track-controls button:hover {
+  background-color: #5548d3;
+  transform: scale(1.05);
 }

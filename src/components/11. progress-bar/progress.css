@@ -1,0 +1,49 @@
+/* Container for the progress bar and input */
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styled input with focus effect */
+.progress-bar-container input {
+  border-radius: 12px;
+  width: 100px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.progress-bar-container input:focus {
+  border-color: #6c63ff;
+}
+
+/* Progress bar outer wrapper */
+.progress-bar-container .progress-bar .wrapper {
+  width: 200px;
+  height: 30px;
+  border-radius: 40px;
+  background-color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner progress bar that expands based on progress */
+.progress-bar-container .progress-bar .wrapper .innerWrapper {
+  height: 100%;
+  width: 0%; /* This width will be dynamically updated via JavaScript */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #6c63ff, #8a80ff);
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 1.5s ease 0.3s;
+}

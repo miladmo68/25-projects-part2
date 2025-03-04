@@ -69,11 +69,6 @@ const questions = [
   },
 ];
 
-//currentquestion
-//score
-//selectedOptions
-//showresult
-
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -82,9 +77,11 @@ function Quiz() {
   );
   const [showResult, setShowResult] = useState(false);
 
-  function handleSelectedOption(getOptionItem) {
+  // When an option is selected, do nothing if already answered.
+  function handleSelectedOption(optionItem) {
+    if (selectedOptions[currentQuestion] !== null) return;
     const updatedSelectedOptions = [...selectedOptions];
-    updatedSelectedOptions[currentQuestion] = getOptionItem;
+    updatedSelectedOptions[currentQuestion] = optionItem;
     setSelectedOptions(updatedSelectedOptions);
   }
 
@@ -94,9 +91,8 @@ function Quiz() {
     }
   }
 
-  console.log(selectedOptions, score);
-
   function handleNextQuestion() {
+    // Increase score if correct
     if (
       selectedOptions[currentQuestion] ===
       questions[currentQuestion].correctAnswer
@@ -118,6 +114,9 @@ function Quiz() {
     setShowResult(false);
   }
 
+  // Determine if the question has been answered.
+  const answered = selectedOptions[currentQuestion] !== null;
+
   return (
     <div className="quiz">
       <h1>Quiz App</h1>
@@ -126,19 +125,35 @@ function Quiz() {
           <h2>Question {currentQuestion + 1}</h2>
           <p>{questions[currentQuestion].question}</p>
           <div className="options">
-            {questions[currentQuestion].options.map((optionItem) => (
-              <button
-                key={optionItem}
-                className={`option ${
-                  selectedOptions[currentQuestion] === optionItem
-                    ? "selected"
-                    : ""
-                }`}
-                onClick={() => handleSelectedOption(optionItem)}
-              >
-                {optionItem}
-              </button>
-            ))}
+            {questions[currentQuestion].options.map((optionItem) => {
+              let buttonClass = "option";
+
+              // If answered, set styles for correct and wrong options.
+              if (answered) {
+                if (optionItem === questions[currentQuestion].correctAnswer) {
+                  buttonClass += " correct"; // Always green if it's the right answer.
+                }
+                if (
+                  optionItem === selectedOptions[currentQuestion] &&
+                  optionItem !== questions[currentQuestion].correctAnswer
+                ) {
+                  buttonClass += " wrong"; // Turn red if wrong option was selected.
+                }
+              } else if (selectedOptions[currentQuestion] === optionItem) {
+                buttonClass += " selected"; // Optional styling while selecting.
+              }
+
+              return (
+                <button
+                  key={optionItem}
+                  className={buttonClass}
+                  onClick={() => handleSelectedOption(optionItem)}
+                  disabled={answered} // Disable all options once one is selected.
+                >
+                  {optionItem}
+                </button>
+              );
+            })}
           </div>
           <div className="button-container">
             <button

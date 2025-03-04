@@ -5,6 +5,7 @@ import ProgressBar from "./components/11. progress-bar";
 import BMICalculator from "./components/12. bmi-calculator";
 import ButtonRippleEffect from "./components/13. button-ripple-effect";
 import DragAndDropFeature from "./components/14. drag-and-drop";
+import FormValidation from "./components/15. simple-form-validation";
 import DigitalClock from "./components/2. digital-clock";
 import CountdownTimerTest from "./components/3. countdown-timer/test";
 import StepProgressBarTest from "./components/4. step-progress-bar/test";
@@ -45,6 +46,8 @@ function App() {
       <ButtonRippleEffect />
       <hr style={{ border: "1px solid black" }} />
       <DragAndDropFeature />
+      <hr style={{ border: "1px solid black" }} />
+      <FormValidation />
     </div>
   );
 }

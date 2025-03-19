@@ -8,6 +8,7 @@ import DragAndDropFeature from "./components/14. drag-and-drop";
 import FormValidation from "./components/15. simple-form-validation";
 import FileUpload from "./components/16. file-upload";
 import Quiz from "./components/17. quiz-app";
+import NestedComments from "./components/18. nested-comments";
 import DigitalClock from "./components/2. digital-clock";
 import CountdownTimerTest from "./components/3. countdown-timer/test";
 import StepProgressBarTest from "./components/4. step-progress-bar/test";
@@ -54,6 +55,8 @@ function App() {
       <FileUpload />
       <hr style={{ border: "1px solid black" }} />
       <Quiz />
+      <hr style={{ border: "1px solid black" }} />
+      <NestedComments />
     </div>
   );
 }

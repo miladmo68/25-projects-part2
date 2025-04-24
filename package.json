@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
     "@react-pdf/renderer": "^4.3.0",
     "25-projects2": "file:",
+    "firebase": "^11.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -26,5 +30,17 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladmo68/25-projects-part2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miladmo68/25-projects-part2/issues"
+  },
+  "homepage": "https://github.com/miladmo68/25-projects-part2#readme"
 }

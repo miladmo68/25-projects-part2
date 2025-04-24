@@ -11,6 +11,7 @@ import Quiz from "./components/17. quiz-app";
 import NestedComments from "./components/18. nested-comments";
 import PdfViewer from "./components/19. pdf-viewer";
 import DigitalClock from "./components/2. digital-clock";
+import FirebaseTodo from "./components/20. firebase-todo";
 import CountdownTimerTest from "./components/3. countdown-timer/test";
 import StepProgressBarTest from "./components/4. step-progress-bar/test";
 import RandomQuoteGenerator from "./components/5. random-quote-generator";
@@ -60,6 +61,8 @@ function App() {
       <NestedComments />
       <hr style={{ border: "1px solid black" }} />
       <PdfViewer />
+      <hr style={{ border: "1px solid black" }} />
+      <FirebaseTodo />
     </div>
   );
 }
